@@ -203,7 +203,7 @@ var CSSPropertyOperations = {
    * @param {ReactDOMComponent} component
    */
   setValueForStyles: function(node, styles, component) {
-    var style = node.style;
+    var style = node.style || {};
     for (var styleName in styles) {
       if (!styles.hasOwnProperty(styleName)) {
         continue;
